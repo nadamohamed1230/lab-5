@@ -1,0 +1,43 @@
+﻿@page
+@model lab_5.Pages.Task_listModel
+@{
+}
+<body>
+	<h1>
+		<center>
+			<b>
+				Tasks List
+			</b>
+		</center>
+	</h1>
+	<table class="table-bordered table">
+		<thead>
+			<th>
+				#
+			</th>
+			<th>
+				Task
+			</th>
+		</thead>
+		<tbody>
+			@{
+				int i = 1;
+				foreach(string t in @Model.Tasks)
+
+				{
+					<tr>
+					<td>@i</td>
+					<td>@t</td>
+					</tr>
+					i++;
+				}
+			
+			}
+		
+		</tbody>
+		
+	</table>
+	<form method="post">
+	<button class="btn btn-primary"> Add new Task</button>
+	</form>
+</body>
